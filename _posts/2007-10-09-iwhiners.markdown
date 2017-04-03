@@ -1,0 +1,30 @@
+---
+date: '2007-10-09 19:36:36'
+layout: post
+slug: iwhiners
+status: publish
+title: iWhiners
+wordpress_id: '6'
+categories:
+- Apple
+---
+
+There has been a lot of bitching about the iPhone lately: no SDK, bricking the phone with the 1.1.1 update, and the price drop to name a few. But in all of the instances I’ve read about, I’m 100% behind Apple. When someone purchased an iPhone, they knew what they were getting: a phone with no 3rd party support and a locked phone that only works with AT&T. If thye weren’t ok with that, they shouldn’t have bought it.
+<!--more-->
+Apple publicly announced, and most Apple news sites reported that the 1.1.1 update would possibly brick your phone. The update itself warned that. Any idiot with a hacked iPhone who bricked it because they installed the update got what they deserved. Their problem, not Apple’s.
+
+Also, realize that the hack(s) that cause the bricking were firmware updates — not software. The 1.1.1 update wipes the memory and installs a fresh set of software. But that software won’t work with the hacked firmware.
+
+I have zero sympathy for anyone, in any situation, who installs hacked firmware. I’ve done it myself and if it had fucked up I would have blamed no one but myself.
+
+And why is no one bitching that certain Blackberry models only work with certain wireless providers? Why does everyone expect Apple’s consumer electronic products (iPhone, AppleTV, etc.) to support whatever hacking they want, but no one bitches when they can’t do the same to their stereo, dvd player, or toaster? Apple isn’t selling the iPhone as a portable computer, they are selling it as a really spiffy phone. Just because people have false expectations doesn’t mean Apple has to live up to them.
+
+As to the price issue, that is the way it has always been with technology. Should the people that bought Playstation 3s get a refund now that the price was lowered? I thought it was overly generous of Apple to give the $100 gift cards to people who paid the higher price. As a business, if I lower my prices, I’m sure has hell not giving a refund to everyone who bought it at a higher price. When a price at Walmart is “rolledback”, do these people go and demand their money back?
+
+And as far as technology goes, early adopters always pay a premium. That a reason I rarely ever buy a hardware product that hasn’t been on the market for at least a few months. The price always comes down, and I’m happy to let others find the initial bugs and flaws.
+
+I’m sure Apple will eventually release an iPhone SDK. But you never see them release one for a 1.0 product (except the OS, which requires one). They have to be absolutely certain they can live with the structure of the iPhone environment before they can release an SDK. Otherwise, they are stuck in backwards-compatibility-hell like Microsoft still is with DOS. Apple always makes sure everything is solid before releasing a public API. And that is part of what makes developing for them such a joy.
+
+I basically have an SDK for writing MacSQL plugins that goes back to 1997. I’m the only one that uses it. And boy is it a pain in the ass when I have to change something in every plugin because of architectural changes I’m making to MacSQL or the MacSQL Framework. I can’t imagine the hell Apple would have to go through with an iPhone SDK before they are ready for it. I’m still scared about making the MacSQL Plugin API public and it’s been around for almost 10 years!
+
+Why can’t anyone ever think of an issue from the other side. Apple has never promised anything about the iPhone and failed to deliver. The problem is with the iWhiners, not Apple.
