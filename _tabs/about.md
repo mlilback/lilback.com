@@ -9,6 +9,8 @@ I'm a Principal Software Engineer at [JotVision](https://www.jotvision.com), an 
 
 I also own [Much Better Than Cats, LLC](https://www.mbtcats.com), my indie software company.
 
+I am Autistic. I wasn't diagnosed until I was 51. I spent my whole life feeling awkward, never understanding social cues/norms, and losing touch with people I'd met or been friends with. Since my diagnosis, my mental health and life have improved greatly.
+
 I live in Munhall, PA, a suburb of Pittsburgh, and I've been writing here about technology, programming, and whatever else is on my mind since 2006.
 
 ---
