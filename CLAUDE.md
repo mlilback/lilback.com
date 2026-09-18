@@ -43,6 +43,27 @@ author: mlilback
 Pet Peeves, Comedy, Society, Alcove). `tags` are specific. `author: mlilback`
 resolves through `_data/authors.yml`.
 
+## Post images and social cards
+
+`image:` in a post's front matter sets `og:image` **and** renders the image as a
+banner at the top of the post -- Chirpy gives you both or neither.
+
+```yaml
+image:
+  path: /images/whatever.jpg
+  alt: Describes the image, and becomes the banner's caption
+```
+
+Cards are **1.91:1**; 1200x628 is the target. `scripts/social-card.swift` crops a
+screenshot to a card, optionally painting over a stray desktop icon:
+
+    swift scripts/social-card.swift shot.png --info
+    swift scripts/social-card.swift shot.png images/out.jpg --rect X Y W H \
+        [--patch X Y W H] [--width 1200] [--quality 0.82]
+
+Use it rather than `sips`: sips' `--cropOffset` is measured from the *centered*
+crop, not the top-left, and negative offsets misbehave.
+
 ## Local build
 
 Ruby 3.3.9 via mise (`.mise.toml`, `.ruby-version`):
