@@ -7,6 +7,9 @@ categories:
 - Apple
 tags: [macOS, pandoc, MkDocs, documentation, help book, xcode]
 author: mlilback
+image:
+  path: /images/alcove-help-book.jpg
+  alt: The Alcove help book open in macOS Help Viewer, next to the app itself
 ---
 
 I needed help documentation for [Alcove]({% post_url 2026-05-17-introducing-alcove %}), and I wanted two things out of it: a working Help menu in the app, and a website people could find from a search engine. What I did not want was to write everything twice and watch the two copies drift apart.
