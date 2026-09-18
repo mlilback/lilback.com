@@ -10,9 +10,12 @@
 
 /* ===== Purple theme overrides ===== */
 
-/* Light mode */
+/* Light mode.
+   Chirpy 7.5 renamed the theme attribute from data-mode to data-bs-theme, so
+   both are listed -- otherwise an upgrade silently drops these overrides. */
 :root,
-html[data-mode='light'] {
+html[data-mode='light'],
+html[data-bs-theme='light'] {
   --link-color: #7c3aed;
   --link-underline-color: rgba(124, 58, 237, 0.3);
   --checkbox-checked-color: #8b5cf6;
@@ -39,7 +42,8 @@ html[data-mode='light'] {
 }
 
 /* Dark mode */
-html[data-mode='dark'] {
+html[data-mode='dark'],
+html[data-bs-theme='dark'] {
   --link-color: #c4b5fd;
   --link-underline-color: rgba(196, 181, 253, 0.3);
   --checkbox-checked-color: #a78bfa;
