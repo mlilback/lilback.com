@@ -2,6 +2,7 @@
 title: A Story of Disaster
 date: '2009-09-11 21:53:31'
 layout: post
+pin: true
 categories:
 - Personal
 tags:
