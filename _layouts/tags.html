@@ -1,0 +1,34 @@
+---
+layout: page
+# All the Tags of posts, ordered by use count (descending), then name.
+---
+
+{% comment %}
+  Liquid can't sort on a numeric property, so build a sortable string key per tag:
+  a 4-digit inverted count (so a plain ascending sort puts the most-used first),
+  then the lowercased name to break ties, then the original name to display.
+{% endcomment %}
+
+<div id="tags" class="d-flex flex-wrap mx-xl-2">
+  {% assign keyed = '' | split: '' %}
+
+  {% for t in site.tags %}
+    {% assign inverted = 9999 | minus: t[1].size %}
+    {% assign padded = inverted | prepend: '000' | slice: -4, 4 %}
+    {% assign key = padded | append: '|' | append: t[0] | downcase | append: '|' | append: t[0] %}
+    {% assign keyed = keyed | push: key %}
+  {% endfor %}
+
+  {% assign sorted = keyed | sort %}
+
+  {% for entry in sorted %}
+    {% assign parts = entry | split: '|' %}
+    {% assign name = parts | last %}
+    <div>
+      <a class="tag" href="{{ name | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
+        {{ name -}}
+        <span class="text-muted">{{ site.tags[name].size }}</span>
+      </a>
+    </div>
+  {% endfor %}
+</div>

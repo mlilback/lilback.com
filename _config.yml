@@ -5,7 +5,7 @@ lang: en
 timezone: America/New_York
 
 title: Mark Lilback
-tagline: macOS programmer, gamer
+tagline: macOS/rust/web programmer, gamer
 description: >-
   Personal blog of Mark Lilback — full-stack developer, gamer, and software architect
   living in Pittsburgh, PA.
@@ -21,6 +21,8 @@ social:
   links:
     - https://github.com/mlilback
     - https://www.facebook.com/mlilback
+    - https://mastodon.social/@mlilback
+    - https://bsky.app/profile/mlilback.bsky.social
 
 # Theme mode: light | dark | (empty = follow system preference with toggle)
 theme_mode: light
