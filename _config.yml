@@ -94,6 +94,10 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
+analytics:
+  selfhosted:
+    id: enabled # any non-empty value; the include is ours, in _includes/analytics/
+
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -101,6 +105,11 @@ exclude:
   - tools
   - README.md
   - LICENSE
+  - CLAUDE.md
+  - scripts
+  - src
+  - wrangler.jsonc
+  - node_modules
   - purgecss.js
   - "*.config.js"
   - "package*.json"

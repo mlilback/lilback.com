@@ -1,0 +1,21 @@
+<!-- Self-hosted pageview beacon -- posts to our own Worker. No cookies. -->
+<script>
+  (function () {
+    if (navigator.doNotTrack === '1') return;
+    var send = function () {
+      try {
+        fetch('/beacon', {
+          method: 'POST',
+          keepalive: true,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            p: location.pathname,
+            r: document.referrer
+          })
+        }).catch(function () {});
+      } catch (e) {}
+    };
+    if (document.readyState === 'complete') send();
+    else addEventListener('load', send, { once: true });
+  })();
+</script>
