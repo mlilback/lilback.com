@@ -1,13 +1,15 @@
 # lilback.com
 
 Mark's personal blog. Jekyll + the **Chirpy** theme, published as
-**www.lilback.com** from this repo (`mlilback/mlilback.github.io`) via GitHub
-Pages.
+**www.lilback.com** from this repo (`mlilback/lilback.com`) by a **Cloudflare
+Worker**. GitHub Pages was retired 2026-09-20 -- it offered no logs or
+analytics.
 
 ## The two things that bite
 
 - **The branch is `master`, not `main`.** `.github/workflows/pages-deploy.yml`
-  builds and deploys on every push to `master` — a push *is* a publish.
+  builds and runs `wrangler deploy` on every push to `master` — a push
+  *is* a publish.
 - **`permalink: /:title/` in `_config.yml` is deliberate.** It preserves the
   URL structure from before the Chirpy migration. Changing it breaks every
   existing inbound link.
@@ -63,6 +65,33 @@ screenshot to a card, optionally painting over a stray desktop icon:
 
 Use it rather than `sips`: sips' `--cropOffset` is measured from the *centered*
 crop, not the top-left, and negative offsets misbehave.
+
+## Hosting and analytics
+
+The site is a **Cloudflare Worker with static assets** (`wrangler.jsonc`,
+`src/index.js`), not a Pages project. The same Worker serves `_site` and
+collects pageviews at `/beacon` -- no cookies, no client storage, no
+third-party script. Uniques are a hash of IP + UA + the date, so the value
+rotates daily.
+
+    wrangler deploy          # from the Mac; CI does the same on push
+
+Two traps:
+
+- **`cloudflare/wrangler-action@v3` installs wrangler 3.90 by default**, which
+  cannot parse `wrangler.jsonc` and fails with "Missing entry-point". The
+  workflow pins `wranglerVersion`.
+- **Anything at the repo root that Jekyll doesn't recognise gets copied into
+  `_site` and published.** `src/index.js` was served as a static asset by the
+  first deploy. `src`, `wrangler.jsonc`, `scripts` and `CLAUDE.md` are in
+  `exclude:` for this reason.
+
+Query the data with the SQL API against dataset `blog_hits`; blob positions
+are documented in `src/index.js` and queries are kept in `scripts/queries.sql`.
+
+Don't connect Cloudflare's git integration: `_plugins/posts-lastmod-hook.rb`
+shells out to `git` and needs full history, which is why CI checks out with
+`fetch-depth: 0`.
 
 ## Local build
 
