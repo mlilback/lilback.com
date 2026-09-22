@@ -1,9 +1,10 @@
 ---
 title: An AppKit layout bug that got worse in macOS 27
-date: '2026-09-20 12:00:00'
+date: '2026-09-22 08:19:42'
 layout: post
 categories:
 - Programming
+- Alcove
 - Apple
 tags: [macOS, AppKit, NSToolbar, NSSearchToolbarItem, auto layout, NSSplitView]
 author: mlilback
