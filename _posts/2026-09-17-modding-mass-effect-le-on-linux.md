@@ -51,9 +51,9 @@ Grab `ME3TweaksModManagerExtractor_<version>.exe` from the [releases page](https
 7z e ME3TweaksModManagerExtractor_*.exe ME3TweaksModManager/ME3TweaksModManager.exe
 ```
 
-Put the exe somewhere the game's prefix can reach through a drive letter. M3's default mod library is `mods\` next to it. Version 9.2 and later bundles its own .NET, so no winetricks, and it fetches a Linux-specific Visual C++ runtime itself when it installs ASIs.
+Put the exe somewhere the game's prefix can reach through a drive letter. M3's default mod library is `mods\` next to it. Version 9.2 and later bundles its own .NET, so no winetricks. When it installs ASIs it fetches the Visual C++ runtime DLLs and drops them next to the game executable, the same DLLs as on Windows. On Windows you get prompted about the runtime instead.
 
-M3 has to run in the same prefix with the same Proton as the EA App and the game. That's how it finds the install: the prefix holds the `HKLM\SOFTWARE\BioWare\Mass Effect Legendary Edition` `Install Dir` key, and M3 picked up LE1, LE2, LE3 and the launcher with no manual setup at all.
+Run M3 in the same prefix with the same Proton as the EA App and the game. That's how it finds the install: the prefix holds the `HKLM\SOFTWARE\BioWare\Mass Effect Legendary Edition` `Install Dir` key, and M3 picked up LE1, LE2, LE3 and the launcher with no manual setup at all. It's a recommendation and not a requirement, though. ME3Tweaks' developer says you can run M3 anywhere and add the game directory by hand. Sharing the prefix just saves you that step.
 
 I used a script instead of a Lutris entry:
 
@@ -88,7 +88,7 @@ exec umu-run "$M3_DIR/ME3TweaksModManager.exe"
 
 Three things went wrong writing that. `PROTONPATH` wants the full directory path or a name umu can resolve, and GE-Proton's folder is `GE-Proton11-7-x86_64` while the prefix's `version` file says `GE-Proton11-7`, so the bare name fails with `toolmanifest.vdf not found`. `pgrep` takes extended regex by default and has no `-E` option, so adding one makes it error out and the guard silently never fires. And I used WineD3D on the strength of reports that DXVK blacks out M3's window, which means I never actually tested DXVK myself.
 
-On first start M3 warns you it's running under Wine. Don't turn on dark mode -- M3's own changelog calls it very broken there. Settings and logs live inside the prefix at `drive_c/ProgramData/ME3TweaksModManager/`, and those logs are the first place to look when something goes sideways.
+On first start M3 warns you it's running under Wine. Don't turn on dark mode -- M3's own changelog calls it very broken there. Settings and logs live inside the prefix at `drive_c/ProgramData/ME3TweaksModManager/`, and those logs are the first place to look when something goes sideways. If you're reporting a problem, use M3's Help menu to upload the logs rather than digging the file out yourself. That's what the developers expect.
 
 ## Back up first
 
@@ -100,7 +100,7 @@ Create one empty folder per game first (`backups/LE1`, `LE2`, `LE3`). M3 copies 
 
 Nexus's "Mod Manager Download" buttons don't work. They open an `nxm://` link and nothing on the Linux host handles it, so the browser offers to "open xdg-open" and then nothing happens. Use Manual Download. M3's own in-app downloads are reported broken under Wine too.
 
-Don't drag large archives onto M3. Small ones dragged fine, but dropping the 1.9 GB LE1 Community Patch archive pinned M3's UI thread at full CPU and never opened it. Force-quit was the only way out, and it was safe, since nothing had been written yet. Use the import menu.
+Don't drag large archives onto M3. Small ones dragged fine, but dropping the 1.9 GB LE1 Community Patch archive pinned M3's UI thread at full CPU and never opened it. Force-quit was the only way out, and it was safe, since nothing had been written yet. Use the import menu. I reported this to ME3Tweaks and the developer suspects desktop portals on Wayland are involved, so it's a real bug rather than something about my box. He considers it low priority.
 
 Other drives do show up in the import dialog, just not where you'd look for them. M3 uses the classic Windows file dialog, so the other drive letters are under My Computer rather than in the sidebar. You can also type the path straight into the filename box, like `X:\Downloads\` if that's where your home folder is mapped in `dosdevices/`.
 
