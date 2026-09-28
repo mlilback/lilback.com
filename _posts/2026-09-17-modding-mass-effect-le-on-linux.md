@@ -102,7 +102,7 @@ Nexus's "Mod Manager Download" buttons don't work. They open an `nxm://` link an
 
 Don't drag large archives onto M3. Small ones dragged fine, but dropping the 1.9 GB LE1 Community Patch archive pinned M3's UI thread at full CPU and never opened it. Force-quit was the only way out, and it was safe, since nothing had been written yet. Use the import menu.
 
-The import file dialog only lists `C:`. Type the drive-letter path into the filename box instead, like `X:\Downloads\` if that's where your home folder is mapped in `dosdevices/`.
+Other drives do show up in the import dialog, just not where you'd look for them. M3 uses the classic Windows file dialog, so the other drive letters are under My Computer rather than in the sidebar. You can also type the path straight into the filename box, like `X:\Downloads\` if that's where your home folder is mapped in `dosdevices/`.
 
 Installing straight from an archive doesn't add that version to M3's library, so import anything you want to keep around.
 
