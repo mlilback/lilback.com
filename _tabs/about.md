@@ -23,9 +23,15 @@ Enlighten lets teams build automated, multi-step workflows in Python, JavaScript
 
 ## Indie Dev
 
-My current project at Much Better Than Cats is **Alcove**, a native ebook library manager for Mac, iPad, and iPhone. Think of it as what iTunes was for music — but for ebooks, built for Apple platforms, and designed for people who own hundreds of books across multiple stores and formats. I'll be writing about it here as it develops — see the [alcove tag](/tags/alcove/).
+My current project at Much Better Than Cats is [**Alcove**](https://alcoveapp.app), a native ebook library manager for Mac, iPad, and iPhone. Think of it as what iTunes was for music — but for ebooks, built for Apple platforms, and designed for people who own hundreds of books across multiple stores and formats. I'll be writing about it here as it develops — see the [Alcove category](/categories/alcove/).
 
 In the past, I created a product called MacSQL for managing databases on the Mac, starting with Mac OS 8 well into OS X's lifetime. I also wrote a few games, including a word search for iPad and a mobile game for girls to create paper dolls (written for and sold by a friend of mine). 
+
+My first Mac project was a Hearts game I wrote in 1993 using Think C on a Mac Plus. I had taken a CS class on the C language where my project was a CLI version of Hearts on the school's Unix servers, which I then ported to the Mac.
+
+I was proud of it at the time. Games were not allowed on the school's computers, but since mine was a class project, it was allowed. I remember getting an email from the Dean of the Foreign Relations college thanking me for the game and reporting a few bugs.
+
+I was really impressed when I tried the Mac version on a department Mac II and the window scaled properly to the larger screen and was in 4-bit color!
 
 ## Background
 
@@ -35,6 +41,6 @@ I grew up in Orange, Texas and have lived in the DC and NYC metro areas, and Mor
 
 ## Gaming & Conventions
 
-I'm a lifelong gamer. [Patricia Stephens](https://www.facebook.com/patty.poof) and I have been together since shortly after I moved to Pittsburgh in 2021. We own over 100 board and card games — [Ticket to Ride](https://www.daysofwonder.com/ticket-to-ride/), [Cards Against Humanity](https://www.cardsagainsthumanity.com), and many others see regular play. I'm currently running a [D&D 5e campaign](https://www.dungeonsanddragons.com) and 3D-print and paint miniatures for it. Video games get played on my gaming PC and PS5.
+I'm a lifelong gamer. [Patricia Stephens](https://www.facebook.com/patty.poof) and I have been together since shortly after I moved to Pittsburgh in 2021. We own over 100 board and card games — [Ticket to Ride](https://www.daysofwonder.com/ticket-to-ride/), [Cards Against Humanity](https://www.cardsagainsthumanity.com), and many others see regular play. I'm currently running a [D&D 5e campaign](https://www.dungeonsanddragons.com) and 3D-print and paint miniatures for it. Video games get played on my [gaming PC]({% post_url 2026-09-16-trask-a-quiet-linux-gaming-pc %}) and PS5.
 
 Outside of code, Trish and I go to concerts two or three times a month, host regular game nights, and spend a lot of time with our chosen family. Trish is a huge horror movie fan, so a few weekends a year we make the rounds at conventions like [Horror Realm](https://horrorrealmcon.com) in Pittsburgh and [Cinema Wasteland](https://cinemawasteland.com) in Cleveland.
