@@ -9,7 +9,7 @@ categories:
 tags: [macOS, AppKit, NSToolbar, NSSearchToolbarItem, auto layout, NSSplitView]
 author: mlilback
 image:
-  path: /images/macos27-toolbar-layout-broken.jpg
+  path: /images/macos27-toolbar-layout-card.jpg
   alt: A macOS 27 window with only the toolbar drawn and the sidebar's first row pushed up under the traffic-light buttons
 ---
 
